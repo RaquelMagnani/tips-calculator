@@ -13,7 +13,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Tip calculator app</title>
+    <title>Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -33,22 +33,32 @@
     </header>
     <form name="calculator">
       <label for="bill">Bill</label>
-      <input type="text" id="bill-total" placeholder="$ ">
+      <input type="text" id="bill-total" placeholder="0 ">
     
    <div>
     Select Tip %
-    <button id="btn-5"> 5% </button> 
-    <button id="btn-10">10% </button> 
-    <button id="btn-15">15%</button> 
-    <button id="btn-25">25%</button> 
-    <button id="btn-50">50% </button> 
-    <button id="btn-custom">Custom</button> 
+    <input type="radio" id="btn-5" name="tip" value=0.05  checked>
+    <label for="btn-5">5%</label>
+
+    <input type="radio" id="btn-10"  name="tip" value=0.1>
+    <label for="btn-10">10%</label>
+
+    <input type="radio" id="btn-15" name="tip" value=0.15>
+    <label for="btn-15">15%</label>
+
+    <input type="radio" id="btn-25" name="tip" value=0.25>
+    <label for="btn-25">25%</label>
+    
+    <input type="radio" id="btn-50" name="tip" value=0.5>
+    <label for="btn-50">50%</label>
+
+   <button id="btn-custom">Custom</button>
    </div>
    <label for="people">Number of People</label>  
-   <input id="ppl-total" type="text" placeholder="0"> 
+   <input id="people-total" type="text" placeholder="0"> 
     <div>
-      Tip Amount / person  <span id="tip-total"></span> </br>
-     Total / person  <span id="tip-person"></span>
+      Tip Amount / person  <span id="tip-person"></span> </br>
+     Total / person  <span id="bill-person"></span>
     </div>
 <button class="btn-reset" onclick="reset()">Reset</button>
 </form>
